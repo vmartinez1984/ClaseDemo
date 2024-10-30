@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HolaMundoMvvm.MainPage">
+
+    <StackLayout Padding="30">
+        <Label Text="Nombre:" />
+
+        <!-- Se hace el enlace miedante la palabra clave Bindig a la propiedad del Persona.Nombre del ViewModel -->
+        <Entry Text="{Binding Persona.Nombre}" />
+
+        <!-- Es el equivalente del evento clicked -->
+        <Button Text="Mostrar Información" Command="{Binding GuardarCommand}" />
+
+        <!-- Con este elemento indicaremo el resultado del la operación guardar -->
+        <!-- Se hace el enlace miedante la palabra clave Bindig a la propiedad del Mensaje del ViewModel -->
+        <Label x:Name="Mensaje" Text="{Binding Mensaje}" />
+    </StackLayout>
+
+</ContentPage>
